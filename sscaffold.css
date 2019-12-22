@@ -460,6 +460,12 @@ main section {
 }
 
 
+.row .column.column-70 {
+	flex: 0 0 70%;
+	max-width: 70%;
+}
+
+
 .row .column.column-75 {
 	flex: 0 0 75%;
 	max-width: 75%;
