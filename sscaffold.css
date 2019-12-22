@@ -300,11 +300,11 @@ textarea {
 * 
 ******************************************************************************/
 
-article,
-.container {
+main article,
+main section {
 	margin: 0 auto;
-	max-width: 112.0rem;
-	padding: 0 2.0rem;
+	max-width: 80rem;
+	padding: 7.5rem 0;
 	position: relative;
 	width: 100%;
 }
@@ -787,6 +787,8 @@ button,
 	background-color: transparent;
 	color: #9b4dca;
 	margin-bottom: 1.0rem;
+	vertical-align: text-top;
+	-webkit-appearance: none;
 }
 
 
@@ -892,9 +894,7 @@ button.default[disabled]:hover,
 input,
 select,
 fieldset,
-textarea,
-label,
-legend {
+textarea {
 	margin-bottom: 1.5rem;
 }
 
@@ -963,6 +963,7 @@ legend {
 	display: block;
 	font-size: 1.6rem;
 	font-weight: 700;
+	margin-bottom: .5rem;
 }
 
 
