@@ -89,6 +89,15 @@ samp {
 }
 
 
+p > pre,
+p > code,
+p > kbd,
+p > samp {
+	/* Render code blocks contained by <p> blocks as inline. */
+	display: inline;
+}
+
+
 img {
 	/* Remove the border on images inside links in IE 10. [1] */
 	border-style: none;
