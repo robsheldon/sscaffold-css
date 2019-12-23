@@ -47,6 +47,7 @@ ul[class],
 ol[class],
 dl,
 li,
+blockquote,
 figure,
 figcaption,
 button,
@@ -59,14 +60,10 @@ textarea {
 }
 
 
-main {
-	/* Render the 'main' element consistently in IE. [1] */
-	display: block;
-}
-
-
+main,
 details {
-	/* Add the correct display in Edge, IE 10+, and Firefox. [1] */
+	/* Render <main> consistently in IE and add the correct display for <details>
+	   in Edge, IE 10+, and Firefox. [1] */
 	display: block;
 }
 
@@ -142,6 +139,8 @@ img {
 	border-style: none;
 	/* Go ahead and make these block-level elements. I'm not sure about this. [4] */
 	display: block;
+	/* [2] */
+	max-width: 100%;
 }
 
 
@@ -169,7 +168,9 @@ abbr[title] {
 b,
 strong {
 	/* Add the correct font weight in Chrome, Edge, and Safari. [1] */
-	font-weight: bolder;
+	/* This has been changed from [1] because the 'bolder' value is not well
+	   enough supported in common fonts: https://css-tricks.com/almanac/properties/f/font-weight/ */
+	font-weight: bold;
 }
 
 
@@ -199,6 +200,12 @@ sub {
 sup {
 	/* Enforce 'sup' positioning in all browsers. [1] */
 	top: -0.5em;
+}
+
+
+table {
+	/* [2] */
+	width: 100%;
 }
 
 
@@ -297,12 +304,6 @@ legend {
 }
 
 
-progress {
-	/* Add the correct vertical alignment in Chrome, Firefox, and Opera. [1] */
-	vertical-align: baseline;
-}
-
-
 textarea {
 	/* Remove the default vertical scrollbar in IE 10+. [1] */
 	overflow: auto;
@@ -344,6 +345,12 @@ textarea {
 	-webkit-appearance: button;
 	/* Fix the font properties in Safari. [1] */
 	font: inherit;
+}
+
+
+progress {
+	/* Add the correct vertical alignment in Chrome, Firefox, and Opera. [1] */
+	vertical-align: baseline;
 }
 
 
@@ -602,9 +609,11 @@ main section {
 	display: block;
 }
 
+
 .float-left {
 	float: left;
 }
+
 
 .float-right {
 	float: right;
@@ -621,13 +630,16 @@ main section {
 * 
 ******************************************************************************/
 
+/**
+ * Typography: font, letter-spacing, line-height, text-*, list-style-type.
+ */
+
 html {
 	font-size: 62.5%;
 }
 
 
 body {
-	color: #606c76;
 	font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	font-size: 1.6em;
 	font-weight: 300;
@@ -636,150 +648,10 @@ body {
 }
 
 
-blockquote {
-	border-left: 0.3rem solid #d1d1d1;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 1rem 1.5rem;
-}
-
-
-blockquote *:last-child {
-	margin-bottom: 0;
-}
-
-
 code {
-	background: #f4f5f6;
-	border-radius: .4rem;
 	font-size: 86%;
-	margin: 0 .2rem;
-	padding: .2rem .5rem;
 }
 
-
-pre {
-	background: #f4f5f6;
-	border-left: 0.3rem solid #9b4dca;
-}
-
-
-pre > code {
-	border-radius: 0;
-	padding: 1rem 1.5rem;
-}
-
-
-hr {
-	border: 0;
-	border-top: 0.1rem solid #f4f5f6;
-	margin: 3.0rem 0;
-}
-
-
-a {
-	color: #9b4dca;
-	text-decoration: none;
-}
-
-
-a:focus, a:hover {
-	color: #606c76;
-}
-
-
-b,
-strong {
-	font-weight: bold;
-}
-
-
-dl,
-ol,
-ul {
-	list-style: none;
-	margin-top: 0;
-	padding-left: 0;
-}
-
-
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-	font-size: 90%;
-	margin: 1.5rem 0 1.5rem 3.0rem;
-}
-
-
-ol {
-	list-style: decimal inside;
-}
-
-
-ul {
-	list-style: circle inside;
-}
-
-
-dd,
-dt,
-li {
-	margin-bottom: 1.0rem;
-}
-
-
-blockquote,
-dl,
-figure,
-form,
-ol,
-p,
-pre,
-table,
-ul {
-	margin-bottom: 2.5rem;
-}
-
-
-table {
-	border-spacing: 0;
-	width: 100%;
-}
-
-
-td,
-th {
-	border-bottom: 0.1rem solid #e1e1e1;
-	padding: 1.2rem 1.5rem;
-}
-
-
-td:first-child,
-th:first-child {
-	padding-left: 0;
-}
-
-
-td:last-child,
-th:last-child {
-	padding-right: 0;
-}
-
-
-img {
-	max-width: 100%;
-}
-
-
-/**
- * Heading elements.
- */
 
 h1,
 h2,
@@ -789,8 +661,6 @@ h5,
 h6 {
 	font-weight: 300;
 	letter-spacing: -.1rem;
-	margin-bottom: 2.0rem;
-	margin-top: 0;
 }
 
 
@@ -833,6 +703,296 @@ h6 {
 }
 
 
+dl {
+	list-style: none;
+}
+
+
+ol {
+	list-style: decimal inside;
+}
+
+
+ul {
+	list-style: circle inside;
+}
+
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+	font-size: 90%;
+}
+
+
+.button,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	line-height: 3.8rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+label,
+legend {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+
+label.inline,
+legend.inline {
+	font-weight: normal;
+}
+
+
+/**
+ * Layout: Display, margin, padding, height, and width.
+ */
+
+blockquote,
+dl,
+figure,
+form,
+ol,
+p,
+pre,
+table,
+ul {
+	margin-bottom: 2.5rem;
+}
+
+
+blockquote {
+	padding: 1rem 1.5rem;
+}
+
+
+blockquote *:last-child {
+	margin-bottom: 0;
+}
+
+
+code {
+	margin: 0 .2rem;
+	padding: .2rem .5rem;
+}
+
+
+pre > code {
+	padding: 1rem 1.5rem;
+}
+
+
+hr {
+	margin: 3.0rem 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 2.0rem;
+	margin-top: 0;
+}
+
+
+dl,
+ol,
+ul {
+	margin-top: 0;
+	padding-left: 0;
+}
+
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+	margin: 1.5rem 0 1.5rem 3.0rem;
+}
+
+
+dd,
+dt,
+li {
+	margin-bottom: 1.0rem;
+}
+
+
+table {
+	border-spacing: 0;
+}
+
+
+td,
+th {
+	padding: 1.2rem 1.5rem;
+}
+
+
+td:first-child,
+th:first-child {
+	padding-left: 0;
+}
+
+
+td:last-child,
+th:last-child {
+	padding-right: 0;
+}
+
+
+input,
+select,
+fieldset,
+textarea {
+	margin-bottom: 1.5rem;
+}
+
+
+textarea {
+	min-height: 6.5rem;
+}
+
+
+.button,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	display: inline-block;
+	height: 3.8rem;
+	padding: 0 3.0rem;
+	margin-bottom: 1.0rem;
+}
+
+
+[type='email'],
+[type='number'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='text'],
+[type='url'],
+textarea,
+select {
+	height: 3.8rem;
+	padding: .6rem 1.0rem;
+	width: 100%;
+}
+
+
+[type='checkbox'],
+[type='radio'] {
+	display: inline;
+}
+
+
+select {
+	padding-right: 3.0rem;
+}
+
+
+label,
+legend {
+	display: block;
+	margin-bottom: .5rem;
+}
+
+
+label.inline,
+legend.inline {
+	display: inline-block;
+	margin-left: .5rem;
+}
+
+
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+
+
+/**
+ * Colors, borders, outline, box-shadow, appearance, and opacity.
+ */
+
+body {
+	color: #606c76;
+}
+
+
+a {
+	color: #9b4dca;
+	text-decoration: none;
+}
+
+
+a:focus, a:hover {
+	color: #606c76;
+}
+
+
+blockquote {
+	border-left: 0.3rem solid #d1d1d1;
+}
+
+
+pre,
+code {
+	background: #f4f5f6;
+}
+
+
+pre {
+	border-left: 0.3rem solid #9b4dca;
+}
+
+
+code {
+	border-radius: .4rem;
+}
+
+
+pre > code {
+	border-radius: 0;
+}
+
+
+hr {
+	border: 0;
+	border-top: 0.1rem solid #f4f5f6;
+}
+
+
+td,
+th {
+	border-bottom: 0.1rem solid #e1e1e1;
+}
+
+
 /**
  * Button styling. All buttons start with the "outline" style defined in
  * milligram.css [2]. Buttons with a "submit" type or a "default" attribute
@@ -846,20 +1006,9 @@ button,
 [type="submit"] {
 	border: 0.1rem solid #9b4dca;
 	border-radius: .4rem;
-	display: inline-block;
-	font-size: 1.1rem;
-	font-weight: 700;
-	height: 3.8rem;
-	letter-spacing: .1rem;
-	line-height: 3.8rem;
-	padding: 0 3.0rem;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
 	white-space: nowrap;
 	background-color: transparent;
 	color: #9b4dca;
-	margin-bottom: 1.0rem;
 	vertical-align: text-top;
 	-webkit-appearance: none;
 }
@@ -964,11 +1113,17 @@ button.default[disabled]:hover,
  * Other form elements.
  */
 
-input,
-select,
-fieldset,
-textarea {
-	margin-bottom: 1.5rem;
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='text']:focus,
+[type='url']:focus,
+textarea:focus,
+select:focus {
+	border-color: #9b4dca;
+	outline: 0;
 }
 
 
@@ -988,71 +1143,17 @@ select {
 	border: 0.1rem solid #d1d1d1;
 	border-radius: .4rem;
 	box-shadow: none;
-	box-sizing: inherit;
-	height: 3.8rem;
-	padding: .6rem 1.0rem;
-	width: 100%;
-}
-
-
-[type='email']:focus,
-[type='number']:focus,
-[type='password']:focus,
-[type='search']:focus,
-[type='tel']:focus,
-[type='text']:focus,
-[type='url']:focus,
-textarea:focus,
-select:focus {
-	border-color: #9b4dca;
-	outline: 0;
-}
-
-
-[type='checkbox'],
-[type='radio'] {
-	display: inline;
 }
 
 
 select {
 	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDI5IDE0IiB3aWR0aD0iMjkiPjxwYXRoIGZpbGw9IiNkMWQxZDEiIGQ9Ik05LjM3NzI3IDMuNjI1bDUuMDgxNTQgNi45MzUyM0wxOS41NDAzNiAzLjYyNSIvPjwvc3ZnPgo=') center right no-repeat;
-	padding-right: 3.0rem;
 }
 
 
 select:focus {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjOWI0ZGNhIiBkPSJNOS4zNzcyNyAzLjYyNWw1LjA4MTU0IDYuOTM1MjNMMTkuNTQwMzYgMy42MjUiLz48L3N2Zz4K');
 }
-
-
-textarea {
-	min-height: 6.5rem;
-}
-
-
-label,
-legend {
-	display: block;
-	font-size: 1.6rem;
-	font-weight: 700;
-	margin-bottom: .5rem;
-}
-
-
-fieldset {
-	border-width: 0;
-	padding: 0;
-}
-
-
-label.inline,
-legend.inline {
-	display: inline-block;
-	font-weight: normal;
-	margin-left: .5rem;
-}
-
 
 
 /******************************************************************************
