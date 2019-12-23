@@ -25,7 +25,31 @@ html {
 
 
 body {
-	/* Remove the margin in all browsers. [1] */
+	/* The following three lines are from [4] */
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+dl,
+li,
+figure,
+figcaption,
+button,
+input,
+optgroup,
+select,
+textarea {
+	/* Remove the default margin for these elements in all browsers. [1],[4] */
 	margin: 0;
 }
 
@@ -98,15 +122,33 @@ p > samp {
 }
 
 
+ul[class],
+ol[class],
+dl[class] {
+	/* Remove default padding from list elements that have a class attribute. [4] */
+	padding: 0;
+	/* Reset list style for lists with class attributes. [4] */
+	list-style: none;
+}
+
+
 img {
 	/* Remove the border on images inside links in IE 10. [1] */
 	border-style: none;
+	/* Go ahead and make these block-level elements. I'm not sure about this. [4] */
+	display: block;
 }
 
 
 a {
 	/* Remove the gray background on active links in IE 10. [1] */
 	background-color: transparent;
+}
+
+
+a:not([class]) {
+	/* Makes links a bit more readable while avoiding conflicts. [4] */
+	text-decoration-skip-ink: auto;
 }
 
 
@@ -161,9 +203,8 @@ optgroup,
 select,
 textarea {
 	/* Set the font styles to match the rest of the document in
-	   all browsers. [1] */
-	font-family: inherit;
-	font-size: 100%;
+	   all browsers. [1],[4] */
+	font: inherit;
 	line-height: 1.15;
 	/* Remove the margin in Firefox and Safari. [1] */
 	margin: 0;
@@ -296,6 +337,17 @@ textarea {
 [hidden] {
 	/* Add the correct display in IE 10. [1] */
 	display: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		/* Prevent animations and transitions for users that want that. [4] */
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 
@@ -596,7 +648,6 @@ code {
 pre {
 	background: #f4f5f6;
 	border-left: 0.3rem solid #9b4dca;
-	overflow-y: hidden;
 }
 
 
@@ -659,7 +710,7 @@ ol {
 
 
 ul {
-  list-style: circle inside;
+	list-style: circle inside;
 }
 
 
@@ -706,11 +757,6 @@ th:first-child {
 td:last-child,
 th:last-child {
 	padding-right: 0;
-}
-
-
-p {
-	margin-top: 0;
 }
 
 
@@ -1004,5 +1050,6 @@ legend.inline {
 *   [1] normalize.css, https://github.com/necolas/normalize.css/
 *   [2] milligram.css, https://github.com/milligram/milligram/
 *   [3] https://css-tricks.com/box-sizing/
+*   [4] https://hankchizljaw.com/wrote/a-modern-css-reset/
 * 
 ******************************************************************************/
