@@ -9,7 +9,7 @@
 *,
 *:after,
 *:before {
-	/* Set default box sizing for all elements. [2] */
+	/* Set universal box sizing with inheritance. [3] */
 	box-sizing: inherit;
 }
 
@@ -19,7 +19,7 @@ html {
 	line-height: 1.15;
 	/* Prevent adjustments of font size after orientation changes in iOS. [1] */
 	-webkit-text-size-adjust: 100%;
-	/* Set a default box sizing. [2] */
+	/* Set universal box sizing with inheritance. [3] */
 	box-sizing: border-box;
 }
 
@@ -994,5 +994,6 @@ legend.inline {
 * 
 *   [1] normalize.css, https://github.com/necolas/normalize.css/
 *   [2] milligram.css, https://github.com/milligram/milligram/
+*   [3] https://css-tricks.com/box-sizing/
 * 
 ******************************************************************************/
