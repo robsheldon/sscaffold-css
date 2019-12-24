@@ -383,11 +383,17 @@ progress {
 
 main article,
 main section {
-	margin: 0 auto;
-	max-width: 80rem;
-	padding: 7.5rem 0;
+	padding: 7.5rem 1.0rem;
 	position: relative;
 	width: 100%;
+}
+
+
+main section > *,
+main article > * {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -600,7 +606,8 @@ main section {
 *
 *   These classes provide the 12-column grid from skeleton.css [6]. skeleton.css
 *   set these columns to only work on displays wider than 550px, so for
-*   compatibility, the same is done here.
+*   compatibility, all of these rules are inside a media query. Instead of 550px,
+*   the media query starts at the same 40rem as milligram's does.
 *
 *   The margin-left values are specific to skeleton.css and conflict with
 *   milligram.css's margin-less columns, so that margin is applied only to
@@ -608,7 +615,7 @@ main section {
 * 
 ******************************************************************************/
 
-@media (min-width: 550px) {
+@media (min-width: 40rem) {
 
 	.one.column,
 	.one.columns,
