@@ -632,6 +632,7 @@ main article > * {
 	.two-thirds.column,
 	.one-half.column {
 		margin-left: 4%;
+		padding: 0;
 	}
 
     .one.column:first-child,
