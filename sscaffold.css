@@ -25,8 +25,6 @@ html {
 
 
 body {
-	/* Ensure that the page body fills the display even if the content does not. [4] */
-	min-height: 100vh;
 	/* Smoothly scroll between anchors. [4] */
 	scroll-behavior: smooth;
 	/* optimizeLegibility may cause some performance issues in some browsers
@@ -792,6 +790,39 @@ main article > * {
 
 /******************************************************************************
 *
+*   LAYOUT
+*
+*   Rules that impact the positioning of major layout elements.
+* 
+******************************************************************************/
+
+body {
+	/* Ensure that the page body fills the display even if the content does not. [4] */
+	min-height: 100vh;
+	/* The following two rules allow the header and footer elements to be positioned
+	   correctly assuming they're all direct descendants of the <body> element. */
+	display: flex;
+	flex-direction: column;
+}
+
+
+header,
+footer {
+	/* Prevent these two eleemnts from shrinking when content is added to the <body>
+	   element. */
+	flex-shrink: 0;
+}
+
+
+main {
+	/* Allow the <main> element to grow as necessary. */
+	flex-grow: 1;
+}
+
+
+
+/******************************************************************************
+*
 *   UTILITY CLASSES
 *
 *   A handful of common utility classes.
@@ -836,10 +867,9 @@ html {
 
 
 body {
-	font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 	font-size: 1.6em;
 	font-weight: 300;
-	letter-spacing: .01em;
 	line-height: 1.6;
 }
 
@@ -855,8 +885,8 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: "Crimson Text", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 	font-weight: 300;
-	letter-spacing: -.1rem;
 }
 
 
@@ -880,21 +910,18 @@ h3 {
 
 h4 {
 	font-size: 2.2rem;
-	letter-spacing: -.08rem;
 	line-height: 1.35;
 }
 
 
 h5 {
 	font-size: 1.8rem;
-	letter-spacing: -.05rem;
 	line-height: 1.5;
 }
 
 
 h6 {
 	font-size: 1.6rem;
-	letter-spacing: 0;
 	line-height: 1.4;
 }
 
@@ -910,7 +937,7 @@ ol {
 
 
 ul {
-	list-style: circle inside;
+	list-style: disc inside;
 }
 
 
@@ -932,6 +959,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+	font-family: Verdana;
 	font-size: 1.1rem;
 	font-weight: 700;
 	letter-spacing: .1rem;
@@ -1004,8 +1032,8 @@ h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 2.0rem;
-	margin-top: 0;
+	margin-top: 2.0rem;
+	margin-bottom: 1.0rem;
 }
 
 
@@ -1141,7 +1169,7 @@ body {
 
 
 a {
-	color: #9b4dca;
+	color: #5680cc;
 	text-decoration: none;
 }
 
@@ -1163,7 +1191,7 @@ code {
 
 
 pre {
-	border-left: 0.3rem solid #9b4dca;
+	border-left: 0.3rem solid #5680cc;
 }
 
 
@@ -1200,11 +1228,11 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	border: 0.1rem solid #9b4dca;
+	border: 0.1rem solid #5680cc;
 	border-radius: .4rem;
 	white-space: nowrap;
 	background-color: transparent;
-	color: #9b4dca;
+	color: #5680cc;
 	vertical-align: text-top;
 	-webkit-appearance: none;
 }
@@ -1251,7 +1279,7 @@ button[disabled]:hover,
 [type="submit"][disabled]:focus,
 [type="submit"][disabled]:hover {
 	border-color: inherit;
-	color: #9b4dca;
+	color: #5680cc;
 }
 
 
@@ -1265,7 +1293,7 @@ button.default,
 [type="button"].default,
 [type="reset"].default,
 [type="submit"] {
-	background-color: #9b4dca;
+	background-color: #5680cc;
 	color: #fff;
 }
 
@@ -1300,28 +1328,14 @@ button.default[disabled]:hover,
 [type="reset"].default[disabled]:hover,
 [type="submit"].default[disabled]:focus,
 [type="submit"].default[disabled]:hover {
-	background-color: #9b4dca;
-	border-color: #9b4dca;
+	background-color: #5680cc;
+	border-color: #5680cc;
 }
 
 
 /**
  * Other form elements.
  */
-
-[type='email']:focus,
-[type='number']:focus,
-[type='password']:focus,
-[type='search']:focus,
-[type='tel']:focus,
-[type='text']:focus,
-[type='url']:focus,
-textarea:focus,
-select:focus {
-	border-color: #9b4dca;
-	outline: 0;
-}
-
 
 [type='email'],
 [type='number'],
@@ -1339,6 +1353,20 @@ select {
 	border: 0.1rem solid #d1d1d1;
 	border-radius: .4rem;
 	box-shadow: none;
+}
+
+
+[type='email']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='text']:focus,
+[type='url']:focus,
+textarea:focus,
+select:focus {
+	border-color: #5680cc;
+	outline: 0;
 }
 
 
