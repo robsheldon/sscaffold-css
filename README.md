@@ -4,11 +4,6 @@
     </a>
 </p>
 
-<p align="center">
-    Lightweight CSS for people who build things
-</p>
-
-
 ## Introduction
 
 sscaffold combines css rules from [normalize.css](https://github.com/necolas/normalize.css/), [skeleton.css](https://github.com/dhg/Skeleton), and [milligram](https://github.com/milligram/milligram) into a single, reorganized, easy-to-use css file, with bugfixes and a few other updates and additions. It emphasizes sensible defaults and semantic HTML.
