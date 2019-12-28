@@ -41,7 +41,8 @@ sscaffold exists thanks to:
 * [normalize](https://github.com/necolas/normalize.css/)
 * [skeleton](https://github.com/dhg/Skeleton)
 * [milligram](https://github.com/milligram/milligram)
-* ...and assorted articles on MDN and css-tricks.
+* assorted articles on MDN and css-tricks
+* ...and https://github.com/othneildrew/Best-README-Template/
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/robsheldon/sscaffold-css.svg?style=flat-square
