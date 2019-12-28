@@ -1234,7 +1234,7 @@ button,
 	white-space: nowrap;
 	background-color: transparent;
 	color: #5680cc;
-	vertical-align: text-top;
+	vertical-align: text-bottom;
 	-webkit-appearance: none;
 }
 
