@@ -869,7 +869,7 @@ html {
 
 body {
     font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-	font-size: 1.6em;
+	font-size: 2.0em;
 	font-weight: 300;
 	line-height: 1.6;
 }
@@ -1378,6 +1378,13 @@ select {
 
 select:focus {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjOWI0ZGNhIiBkPSJNOS4zNzcyNyAzLjYyNWw1LjA4MTU0IDYuOTM1MjNMMTkuNTQwMzYgMy42MjUiLz48L3N2Zz4K');
+}
+
+
+@media (min-width: 40rem) {
+	body {
+		font-size: 1.8em;
+	}
 }
 
 
