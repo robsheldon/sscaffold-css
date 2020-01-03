@@ -17,9 +17,9 @@ sscaffold combines css rules from [normalize.css](https://github.com/necolas/nor
 
 ## Using sscaffold
 
-This is currently in a pre-release state. I have at least one known bug to fix and then it'll be getting added to cdnjs.
+I'm releasing it now as a preview. Full documentation and any final bugfixes should be completed before the 0.1.0 release. Once 0.1.0 is released, I'll see about getting it onto cdnjs and then following a semantic versioning system from there.
 
-If you want it added to your favorite repository / dependency management system, open an issue requesting it so that I know it's worth the trouble and I'll get on it.
+If you want it added to your favorite repository / dependency management system, open an issue requesting it so that I know it's worth doing and I'll get on it.
 
 
 ## Documentation
