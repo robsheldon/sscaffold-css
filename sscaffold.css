@@ -17,8 +17,6 @@
 html {
 	/* Fix the line height in all browsers. [1] */
 	line-height: 1.15;
-	/* Prevent adjustments of font size after orientation changes in iOS. [1] */
-	-webkit-text-size-adjust: 100%;
 	/* Set universal box sizing with inheritance. [3] */
 	box-sizing: border-box;
 }
@@ -27,6 +25,8 @@ html {
 body {
 	/* Smoothly scroll between anchors. [4] */
 	scroll-behavior: smooth;
+	/* Prevent adjustments of font size after orientation changes in iOS. [1] */
+	-webkit-text-size-adjust: 100%;
 	/* optimizeLegibility may cause some performance issues in some browsers
 	   (https://marco.org/2012/11/15/text-rendering-optimize-legibility) -- not sure if
 	   this is still current. Probably safe to assume that an appropriately legible
@@ -132,16 +132,6 @@ dl[class] {
 }
 
 
-img {
-	/* Remove the border on images inside links in IE 10. [1] */
-	border-style: none;
-	/* Go ahead and make these block-level elements. I'm not sure about this. [4] */
-	display: block;
-	/* [2] */
-	max-width: 100%;
-}
-
-
 a {
 	/* Remove the gray background on active links in IE 10. [1] */
 	background-color: transparent;
@@ -201,9 +191,14 @@ sup {
 }
 
 
-table {
+body img {
+	/* Remove the border on images inside links in IE 10. [1] */
+	border-style: none;
+	/* Go ahead and make these block-level elements. I'm not sure about this. [4] */
+	display: block;
 	/* [2] */
 	width: 100%;
+	max-width: 100%;
 }
 
 
@@ -378,22 +373,6 @@ progress {
 *   milligram.css [2].
 * 
 ******************************************************************************/
-
-main article,
-main section {
-	padding: 7.5rem 1.0rem;
-	position: relative;
-	width: 100%;
-}
-
-
-main section > *,
-main article > * {
-	max-width: 80rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 
 .row {
 	display: flex;
@@ -826,9 +805,17 @@ main {
 *
 *   UTILITY CLASSES
 *
-*   A handful of common utility classes.
+*   Some helpful utility classes.
 * 
 ******************************************************************************/
+
+.table-container {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
 
 .clearfix:after {
 	clear: both;
@@ -869,9 +856,30 @@ html {
 
 body {
     font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-	font-size: 2.0em;
+	font-size: 1.8em;
 	font-weight: 300;
 	line-height: 1.6;
+}
+
+
+main article,
+main section {
+	padding: 7.5rem 1.0rem;
+	position: relative;
+	width: 100%;
+}
+
+
+main section > *,
+main article > * {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+main section .table-container table {
+	width: 100%;
 }
 
 
@@ -886,43 +894,43 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Crimson Text", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-	font-weight: 300;
+	font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-weight: 500;
 }
 
 
 h1 {
-	font-size: 4.6rem;
+	font-size: 3.9rem;
 	line-height: 1.2;
 }
 
 
 h2 {
-	font-size: 3.6rem;
+	font-size: 3.4rem;
 	line-height: 1.25;
 }
 
 
 h3 {
-	font-size: 2.8rem;
+	font-size: 2.9rem;
 	line-height: 1.3;
 }
 
 
 h4 {
-	font-size: 2.2rem;
+	font-size: 2.6rem;
 	line-height: 1.35;
 }
 
 
 h5 {
-	font-size: 1.8rem;
+	font-size: 2.4rem;
 	line-height: 1.5;
 }
 
 
 h6 {
-	font-size: 1.6rem;
+	font-size: 2.2rem;
 	line-height: 1.4;
 }
 
@@ -988,6 +996,11 @@ legend.inline {
  * Layout: Display, margin, padding, height, and width.
  */
 
+.table-container {
+	max-width: 80rem;
+}
+
+
 blockquote,
 dl,
 figure,
@@ -1033,8 +1046,8 @@ h3,
 h4,
 h5,
 h6 {
-	margin-top: 2.0rem;
-	margin-bottom: 1.0rem;
+	margin-top: 2.0em;
+	margin-bottom: .75em;
 }
 
 
@@ -1383,7 +1396,7 @@ select:focus {
 
 @media (min-width: 40rem) {
 	body {
-		font-size: 1.8em;
+		font-size: 2.0em;
 	}
 }
 
