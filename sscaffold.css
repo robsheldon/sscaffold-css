@@ -1178,7 +1178,7 @@ fieldset {
  */
 
 body {
-	color: #606c76;
+	color: #767676;
 }
 
 
@@ -1189,7 +1189,7 @@ a {
 
 
 a:focus, a:hover {
-	color: #606c76;
+	color: #767676;
 }
 
 
@@ -1264,8 +1264,8 @@ button:hover,
 [type="submit"]:hover {
 	outline: 0;
 	background-color: transparent;
-	border-color: #606c76;
-	color: #606c76;
+	border-color: #767676;
+	color: #767676;
 }
 
 
@@ -1324,8 +1324,8 @@ button.default:hover,
 [type="reset"].default:hover,
 [type="submit"]:focus,
 [type="submit"]:hover {
-	background-color: #606c76;
-	border-color: #606c76;
+	background-color: #767676;
+	border-color: #767676;
 	color: #fff;
 }
 
