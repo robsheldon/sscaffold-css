@@ -31,7 +31,7 @@ Complete documentation is currently underway.
 
 ## License
 
-Like everything else it evolved from, sscaffold is being released under the [MIT license](https://opensource.org/licenses/MIT). See LICENSE.
+Like everything else it evolved from, sscaffold is being released under the [MIT license](https://opensource.org/licenses/MIT). See [LICENSE](https://github.com/robsheldon/sscaffold-css/blob/master/LICENSE).
 
 
 ## Acknowledgements
