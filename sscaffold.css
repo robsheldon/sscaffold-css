@@ -855,7 +855,7 @@ html {
 
 
 body {
-    font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    font-family: "Montserrat", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.8em;
 	font-weight: 300;
 	line-height: 1.6;
@@ -894,7 +894,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Montserrat", "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+	font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 	font-weight: 500;
 }
 
@@ -1178,7 +1178,7 @@ fieldset {
  */
 
 body {
-	color: #767676;
+	color: #595959;
 }
 
 
@@ -1189,7 +1189,7 @@ a {
 
 
 a:focus, a:hover {
-	color: #767676;
+	color: #595959;
 }
 
 
@@ -1264,8 +1264,8 @@ button:hover,
 [type="submit"]:hover {
 	outline: 0;
 	background-color: transparent;
-	border-color: #767676;
-	color: #767676;
+	border-color: #595959;
+	color: #595959;
 }
 
 
@@ -1324,8 +1324,8 @@ button.default:hover,
 [type="reset"].default:hover,
 [type="submit"]:focus,
 [type="submit"]:hover {
-	background-color: #767676;
-	border-color: #767676;
+	background-color: #595959;
+	border-color: #595959;
 	color: #fff;
 }
 
