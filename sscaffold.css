@@ -447,7 +447,8 @@ progress {
 }
 
 
-.row .column.column-offset-33, .row .column.column-offset-34 {
+.row .column.column-offset-33,
+.row .column.column-offset-34 {
 	margin-left: 33.3333%;
 }
 
@@ -457,7 +458,8 @@ progress {
 }
 
 
-.row .column.column-offset-66, .row .column.column-offset-67 {
+.row .column.column-offset-66,
+.row .column.column-offset-67 {
 	margin-left: 66.6666%;
 }
 
@@ -495,7 +497,8 @@ progress {
 }
 
 
-.row .column.column-33, .row .column.column-34 {
+.row .column.column-33,
+.row .column.column-34 {
 	flex: 0 0 33.3333%;
 	max-width: 33.3333%;
 }
@@ -519,7 +522,8 @@ progress {
 }
 
 
-.row .column.column-66, .row .column.column-67 {
+.row .column.column-66,
+.row .column.column-67 {
 	flex: 0 0 66.6666%;
 	max-width: 66.6666%;
 }
@@ -971,7 +975,7 @@ button,
 	font-family: Verdana;
 	font-size: 1.1rem;
 	font-weight: 700;
-	letter-spacing: .1rem;
+	letter-spacing: 0.1rem;
 	line-height: 3.8rem;
 	text-align: center;
 	text-decoration: none;
@@ -1025,8 +1029,8 @@ blockquote *:last-child {
 
 
 code {
-	margin: 0 .2rem;
-	padding: .2rem .5rem;
+	margin: 0 0.2rem;
+	padding: 0.2rem 0.5rem;
 }
 
 
@@ -1047,7 +1051,7 @@ h4,
 h5,
 h6 {
 	margin-top: 2.0em;
-	margin-bottom: .75em;
+	margin-bottom: 0.75em;
 }
 
 
@@ -1137,7 +1141,7 @@ button,
 textarea,
 select {
 	height: 3.8rem;
-	padding: .6rem 1.0rem;
+	padding: 0.6rem 1.0rem;
 	width: 100%;
 }
 
@@ -1156,14 +1160,14 @@ select {
 label,
 legend {
 	display: block;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
 
 
 label.inline,
 legend.inline {
 	display: inline-block;
-	margin-left: .5rem;
+	margin-left: 0.5rem;
 }
 
 
@@ -1188,7 +1192,8 @@ a {
 }
 
 
-a:focus, a:hover {
+a:focus,
+a:hover {
 	color: #595959;
 }
 
@@ -1210,7 +1215,7 @@ pre {
 
 
 code {
-	border-radius: .4rem;
+	border-radius: 0.4rem;
 }
 
 
