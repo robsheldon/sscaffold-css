@@ -382,53 +382,89 @@ html {
 }
 
 
-/* The following media queries adjust the base font size for low-resolution,
-   medium-resolution, and high-resolution desktop devices. */
+/* For lower-resolution displays, the base font size is scaled from 6px up to
+   8px at 1280 x 1024 and larger. */
 @media
 only screen and (max-resolution: 90dpi),
 only screen and (-webkit-max-device-pixel-ratio: 0.9) {
 	html {
-		/* For lower-resolution displays, the base font size is scaled from
-		   about 6px up to about 8.5px at 1280 x 1024. */
-		font-size: calc(37.5% + ((100vw - 480px) / 300));
+		font-size: 37.5%;
 	}
 }
 
 
+@media
+only screen and (max-resolution: 90dpi) and (min-width: 500px),
+only screen and (-webkit-max-device-pixel-ratio: 0.9) and (min-width: 500px) {
+	html {
+		font-size: 43.75%;
+	}
+}
+
+
+@media
+only screen and (max-resolution: 90dpi) and (min-width: 750px),
+only screen and (-webkit-max-device-pixel-ratio: 0.9) and (min-width: 750px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+
+/* For medium-resolution displays, the base font size is scaled from 10px up to
+   12px at 2560 x 1600 and larger. */
 @media
 only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi),
 only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) {
 	html {
-		/* For medium-resolution displays, the base font size is scaled from
-		   about 10px up to 12px at 2560 x 1600. */
-		font-size: calc(62.5% + ((100vw - 560px) / 1000));
+		font-size: 62.5%;
 	}
 }
 
 
 @media
-only screen and (min-width: 1500px) and (min-resolution: 120dpi),
-only screen and (min-width: 1500px) and (-webkit-min-device-pixel-ratio: 1.1) {
+only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi) and (min-width: 1500px),
+only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 1500px) {
 	html {
-		/* For higher-resolution non-mobile displays, the base font size starts
-		   at 13px and goes up from there. */
-		font-size: calc(75% + ((100vw - 500px) / 1000));
+		font-size: 68.75%;
 	}
 }
 
 
-/* The following block targets Internet Explorer 10 and 11, which has a broken
-   calc() function, and sets the font-size starting from an em measure for those
-   browsers at all display resolutions.
-   See also https://www.sitepoint.com/community/t/font-size-calc-100-0-3vw-not-working-in-ie/218960
-*/
 @media
-all and (-ms-high-contrast: none),
-all and (-ms-high-contrast: active),
-all and (-ms-high-contrast: black-on-white),
-all and (-ms-high-contrast: white-on-black) {
+only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi) and (min-width: 2500px),
+only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 2500px) {
 	html {
-		font-size: calc(.5em + ((100vw - 920px) / 500));
+		font-size: 75%;
+	}
+}
+
+
+/* For higher-resolution non-mobile displays, the base font size starts at 13px
+   and goes up from there. */
+@media
+only screen and (min-resolution: 120dpi) and (min-width: 1500px),
+only screen and (-webkit-min-device-pixel-ratio: 1.1) and (min-width: 1500px) {
+	html {
+		font-size: 81.25%;
+	}
+}
+
+
+@media
+only screen and (min-resolution: 120dpi) and (min-width: 2000px),
+only screen and (-webkit-min-device-pixel-ratio: 1.1) and (min-width: 2000px) {
+	html {
+		font-size: 87.5%;
+	}
+}
+
+
+@media
+only screen and (min-resolution: 120dpi) and (min-width: 2750px),
+only screen and (-webkit-min-device-pixel-ratio: 1.1) and (min-width: 2750px) {
+	html {
+		font-size: calc(87.5% + ((100vw - 500px) / 1000));
 	}
 }
 
