@@ -367,10 +367,81 @@ progress {
 
 /******************************************************************************
 *
+*  LAYOUT SCALING
+*
+*  All rem rules are based on a 10px font size at desktop resolutions in a
+*  1920 x 1080 window. This base font size is scaled down for smaller
+*  resolutions and up for higher resolutions.
+*
+******************************************************************************/
+
+html {
+	/* Font size is set to 62.5% by default so that all future rem sizes are
+	   based on a 10px font. [6] */
+	font-size: 62.5%;
+}
+
+
+/* The following media queries adjust the base font size for low-resolution,
+   medium-resolution, and high-resolution desktop devices. */
+@media
+only screen and (max-resolution: 90dpi),
+only screen and (-webkit-max-device-pixel-ratio: 0.9) {
+	html {
+		/* For lower-resolution displays, the base font size is scaled from
+		   about 6px up to about 8.5px at 1280 x 1024. */
+		font-size: calc(37.5% + ((100vw - 480px) / 300));
+	}
+}
+
+
+@media
+only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi),
+only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) {
+	html {
+		/* For medium-resolution displays, the base font size is scaled from
+		   about 10px up to 12px at 2560 x 1600. */
+		font-size: calc(62.5% + ((100vw - 560px) / 1000));
+	}
+}
+
+
+@media
+only screen and (min-width: 1500px) and (min-resolution: 120dpi),
+only screen and (min-width: 1500px) and (-webkit-min-device-pixel-ratio: 1.1) {
+	html {
+		/* For higher-resolution non-mobile displays, the base font size starts
+		   at 13px and goes up from there. */
+		font-size: calc(75% + ((100vw - 500px) / 1000));
+	}
+}
+
+
+/* The following block targets Internet Explorer 10 and 11, which has a broken
+   calc() function, and sets the font-size starting from an em measure for those
+   browsers at all display resolutions.
+   See also https://www.sitepoint.com/community/t/font-size-calc-100-0-3vw-not-working-in-ie/218960
+*/
+@media
+all and (-ms-high-contrast: none),
+all and (-ms-high-contrast: active),
+all and (-ms-high-contrast: black-on-white),
+all and (-ms-high-contrast: white-on-black) {
+	html {
+		font-size: calc(.5em + ((100vw - 920px) / 500));
+	}
+}
+
+
+
+/******************************************************************************
+*
 *   FLEXBOX-BASED COLUMNS
 *
 *   These classes provide the flexbox-based row-and-column layout from
 *   milligram.css [2].
+*
+*   NOT SUPPORTED: Safari 8 (MacOS X 10.10)
 * 
 ******************************************************************************/
 
@@ -851,12 +922,6 @@ main {
 /**
  * Typography: font, letter-spacing, line-height, text-*, list-style-type.
  */
-
-html {
-	/* Font size is set to 62.5% so that all future rem sizes are based on a 10px font. [6] */
-	font-size: 62.5%;
-}
-
 
 body {
 	font-family: "Open Sans", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
@@ -1396,13 +1461,6 @@ select {
 
 select:focus {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAyOSAxNCIgd2lkdGg9IjI5Ij48cGF0aCBmaWxsPSIjOWI0ZGNhIiBkPSJNOS4zNzcyNyAzLjYyNWw1LjA4MTU0IDYuOTM1MjNMMTkuNTQwMzYgMy42MjUiLz48L3N2Zz4K');
-}
-
-
-@media (min-width: 40rem) {
-	body {
-		font-size: 2.0em;
-	}
 }
 
 
