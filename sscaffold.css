@@ -78,14 +78,6 @@ template {
 }
 
 
-h1 {
-	/* Fix the font size and margin on 'h1' elements in 'section' and 
-	   'article' contexts in Chrome, Firefox, and Safari. [1] */
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
-
 hr {
 	/* Add the correct box sizing in Firefox. [1] */
 	box-sizing: content-box;
