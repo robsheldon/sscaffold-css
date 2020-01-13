@@ -14,6 +14,17 @@
 }
 
 
+@media (prefers-reduced-motion: reduce) {
+	* {
+		/* Prevent animations and transitions for users that want that. [4] */
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+
 html {
 	/* Fix the line height in all browsers. [1] */
 	line-height: 1.15;
@@ -342,17 +353,6 @@ progress {
 [hidden] {
 	/* Add the correct display in IE 10. [1] */
 	display: none;
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-	* {
-		/* Prevent animations and transitions for users that want that. [4] */
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
 }
 
 
