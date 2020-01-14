@@ -26,7 +26,7 @@ If you want it added to your favorite repository / dependency management system,
 
 The [sscaffold-css.com](https://sscaffold-css.com/) home page is a demo and brief overview of the current release.
 
-Complete documentation is currently underway.
+Complete documentation is available at [doc.sscaffold-css.com](https://doc.sscaffold-css.com/).
 
 
 ## License
