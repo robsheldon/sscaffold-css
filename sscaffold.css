@@ -959,27 +959,6 @@ body {
 }
 
 
-main article,
-main section {
-	padding: 7.5rem 1.0rem;
-	position: relative;
-	width: 100%;
-}
-
-
-main section > *,
-main article > * {
-	max-width: 80rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-main section .table-container table {
-	width: 100%;
-}
-
-
 code {
 	font-size: 86%;
 }
@@ -1090,11 +1069,34 @@ legend.inline {
 
 
 /**
- * Layout: Display, margin, padding, height, and width.
+ * Layout: Display, position, margin, padding, height, and width.
  */
 
-.table-container {
+main article,
+main section {
+	padding: 7.5rem 1.0rem;
+	position: relative;
+	width: 100%;
+}
+
+
+main section > *,
+main article > * {
 	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+main section .table-container,
+main article .table-container {
+	max-width: 80rem;
+}
+
+
+main section .table-container table,
+main article .table-container table {
+	width: 100%;
 }
 
 
