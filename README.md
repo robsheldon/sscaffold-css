@@ -15,6 +15,23 @@
 sscaffold combines css rules from [normalize.css](https://github.com/necolas/normalize.css/), [skeleton.css](https://github.com/dhg/Skeleton), and [milligram](https://github.com/milligram/milligram) into a single, reorganized, easy-to-use css file, with bugfixes and a few other updates and additions. It emphasizes sensible defaults and semantic HTML.
 
 
+## Size vs. skeleton and milligram
+
+sscaffold is a little bit heftier than skeleton or milligram:
+
+| Library                         | Minified Size <sup>(1)</sup> |
+| -------                         | ---------------------------: |
+| Skeleton 2.0.4 <sup>(2)</sup>   | 7.7K                         |
+| Milligram 1.3.0 <sup>(3)</sup>  | 11K                          |
+| sscaffold 0.1.0 <sup>(4)</sup>  | 14K                          |
+
+* <sup>(1) Each css file was run through [cssminifier](https://cssminifier.com/) for an apples-to-apples comparison.</sup>
+* <sup>(2) The Skeleton 2.0.4 package includes Normalize 3.0.2. The current version of Normalize is 8.0.1. Normalize 3.0.2 was added to the Skeleton 2.0.4 file before minifying it.</sup>
+* <sup>(3) Milligram 1.3.0 requires Normalize 5.0.0. The current version of Normalize is 8.0.1. Normalize 5.0.0 was added to the Milligram 1.3.0 file before minifying it.</sup>
+* <sup>(4) sscaffold 0.1.0 has no external dependencies. Normalize 8.0.1 has already been integrated into sscaffold.css.</sup>
+
+For 3K over Milligram and 7K over Skeleton you save an https request and get the features of both plus a few extras.
+
 ## Using sscaffold
 
 I'm releasing it now as a preview. Once 0.1.0 is released, I'll see about getting it onto cdnjs and then following a semantic versioning system from there.
