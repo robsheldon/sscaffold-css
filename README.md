@@ -34,9 +34,21 @@ For 3K over Milligram and 7K over Skeleton you save an https request and get the
 
 ## Using sscaffold
 
-I'm releasing it now as a preview. Once 0.1.0 is released, I'll see about getting it onto cdnjs and then following a semantic versioning system from there.
+The current version is 0.1.0.
 
-If you want it added to your favorite repository / dependency management system, open an issue requesting it so that I know it's worth doing and I'll get on it.
+#### jsdelivr:
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sscaffold-css@0.1.0/sscaffold.min.css" integrity="sha256-NxJ/Enl6+QKA3ysgZq44/qc6cWmUXbAB/hl+QFBuMck=" crossorigin="anonymous">
+```
+
+#### npm:
+
+```
+npm install sscaffold-css
+```
+
+If you want it added to another repository, dependency management system, or cdn, open an issue requesting it and I'll get on it.
 
 
 ## Documentation
