@@ -1,7 +1,7 @@
 {
   "name": "sscaffold-css",
   "version": "0.1.0",
-  "description": "Base file for sscaffold-css.",
+  "description": "Updated alternative to milligram and skeleton.",
   "homepage": "https://sscaffold-css.com/",
   "repository": "robsheldon/sscaffold-css",
   "license": "MIT",
