@@ -407,7 +407,7 @@ only screen and (-webkit-max-device-pixel-ratio: 0.9) and (min-width: 750px) {
    12px at 2560 x 1600 and larger. */
 @media
 only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi),
-only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) {
+only screen and (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) {
 	html {
 		font-size: 62.5%;
 	}
@@ -416,7 +416,7 @@ only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel
 
 @media
 only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi) and (min-width: 1500px),
-only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 1500px) {
+only screen and (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 1500px) {
 	html {
 		font-size: 68.75%;
 	}
@@ -425,7 +425,7 @@ only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel
 
 @media
 only screen and (min-resolution: 91dpi) and (max-resolution: 119dpi) and (min-width: 2500px),
-only screen (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 2500px) {
+only screen and (-webkit-min-device-pixel-ratio: 0.91) and (-webkit-max-device-pixel-ratio: 1) and (min-width: 2500px) {
 	html {
 		font-size: 75%;
 	}
