@@ -34,7 +34,7 @@ For 3K over Milligram and 7K over Skeleton you save an https request and get the
 
 ## Using sscaffold
 
-The current version is 0.1.0.
+The current version is 0.1.1.
 
 #### jsdelivr:
 
