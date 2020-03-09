@@ -23,12 +23,12 @@ sscaffold is a little bit heftier than skeleton or milligram:
 | -------                         | ---------------------------: |
 | Skeleton 2.0.4 <sup>(2)</sup>   | 7.7K                         |
 | Milligram 1.3.0 <sup>(3)</sup>  | 11K                          |
-| sscaffold 0.1.0 <sup>(4)</sup>  | 14K                          |
+| sscaffold 0.1.1 <sup>(4)</sup>  | 14K                          |
 
 * <sup>(1) Each css file was run through [cssminifier](https://cssminifier.com/) for an apples-to-apples comparison.</sup>
 * <sup>(2) The Skeleton 2.0.4 package includes Normalize 3.0.2. The current version of Normalize is 8.0.1. Normalize 3.0.2 was added to the Skeleton 2.0.4 file before minifying it.</sup>
 * <sup>(3) Milligram 1.3.0 requires Normalize 5.0.0. The current version of Normalize is 8.0.1. Normalize 5.0.0 was added to the Milligram 1.3.0 file before minifying it.</sup>
-* <sup>(4) sscaffold 0.1.0 has no external dependencies. Normalize 8.0.1 has already been integrated into sscaffold.css.</sup>
+* <sup>(4) sscaffold 0.1.1 has no external dependencies. Normalize 8.0.1 has already been integrated into sscaffold.css.</sup>
 
 For 3K over Milligram and 7K over Skeleton you save an https request and get the features of both plus a few extras.
 
@@ -39,7 +39,7 @@ The current version is 0.1.1.
 #### jsdelivr:
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sscaffold-css@0.1.0/sscaffold.min.css" integrity="sha256-NxJ/Enl6+QKA3ysgZq44/qc6cWmUXbAB/hl+QFBuMck=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sscaffold-css@0.1.1/sscaffold.min.css" integrity="sha256-tNrNp6fPTVnhpywTjgNV4jCx6W9d1wuALpwVmAQEYcs=" crossorigin="anonymous">
 ```
 
 #### npm:
